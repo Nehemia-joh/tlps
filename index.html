@@ -9,10 +9,12 @@
   <style>
 /* Enhanced color scheme and styling */
 /* Enhanced color scheme and styling */
+/* Enhanced color scheme and styling */
+/* Enhanced color scheme and styling */
 :root {
     --primary-color: #2b3f48; /* Deep Dark Green */
     --secondary-color: #f4c542; /* Yellow */
-    --text-color: #2b3f48;
+    --text-color: #ffffff;
     --background-color: #121a1f;
     --accent-color: #e5a00d; /* A richer yellow accent */
 }
@@ -41,13 +43,13 @@ nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    background: linear-gradient(90deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+    background: linear-gradient(90deg, var(--primary-color) 25%, var(--secondary-color) 50%);
     padding: 15px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -58,6 +60,12 @@ nav a {
 
 nav a:hover {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
     color: var(--primary-color);
 }
 
@@ -126,12 +134,14 @@ footer {
     nav {
         flex-direction: column;
         align-items: center;
+        padding: 10px; /* Reduce height on mobile */
     }
 
     .card {
         max-width: 90%;
     }
 }
+
 
 
 
@@ -147,7 +157,7 @@ footer {
   <nav class="bg-primary shadow-lg p-4" x-data="{ open: false }">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#" class="text-white text-2xl font-bold flex items-center space-x-2">
-        <img src="Assets/images/TILOPISO.png" alt="TLPS Logo" class="w-10 h-10 rounded-full">
+        <img src="Assets/images/TILOPISO.png" alt="TLPS Logo" class="w-20 h-20 rounded-full">
         <span>TLPS Network</span>
       </a>
       <button @click="open = !open" class="lg:hidden text-white">
